@@ -1,5 +1,6 @@
 import Modal from 'components/Modal/Modal';
 import { useState } from 'react';
+import s from './imageGalleryItem.module.css';
 import PropTypes from 'prop-types';
 
 export default function ImageGalleryItem(props) {
@@ -11,9 +12,9 @@ export default function ImageGalleryItem(props) {
   };
 
   return (
-    <li className="ImageGalleryItem">
+    <li className={s.ImageGalleryItem}>
       <img
-        className="ImageGalleryItem-image"
+        className={s.ImageGalleryItemImage}
         src={webformatURL}
         alt={tags}
         onClick={handleOnClick}

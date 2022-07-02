@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
+import s from './modal.module.css';
 import PropTypes from 'prop-types';
 
 const modalPortal = document.querySelector('#modal-portal');
@@ -33,8 +34,8 @@ export default function Modal({ onClose, children }) {
   };
 
   return createPortal(
-    <div className="Overlay" onClick={handleBackdropClose}>
-      <div className="Modal">{children}</div>
+    <div className={s.Overlay} onClick={handleBackdropClose}>
+      <div className={s.Modal}>{children}</div>
     </div>,
     modalPortal,
   );

@@ -1,9 +1,10 @@
 import ImageGalleryItem from './ImageGalleryItem/ImageGalleryItem';
+import s from './imageGallery.module.css';
 import PropTypes from 'prop-types';
 
 export default function ImageGallery({ images }) {
   return (
-    <ul className="ImageGallery">
+    <ul className={s.ImageGallery}>
       {images.map(image => (
         <ImageGalleryItem key={image.id} image={image}></ImageGalleryItem>
       ))}
